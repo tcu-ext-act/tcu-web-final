@@ -3,7 +3,7 @@
    ========================================================================== */
 
 var SITE_POSTS = [
-  {
+  /*{
     id: 1,
     type: "news",
     slug: "downtown-transit-hub-breaks-ground",
@@ -72,9 +72,9 @@ var SITE_POSTS = [
     image: "https://picsum.photos/seed/buildwire-green/1000/620",
     excerpt: "New legislation requires all new commercial buildings over 50,000 square feet to meet updated energy-performance standards starting in 2028.",
     tags: ["Policy", "Sustainability", "Green Building", "Commercial"]
-  },
+  },*/
   {
-    id: 6,
+    id: 1,
     type: "blog",
     slug: "modular-construction-cutting-timelines",
     title: "5 Ways Modular Construction Is Cutting Project Timelines in Half",
@@ -86,7 +86,8 @@ var SITE_POSTS = [
     image: "https://picsum.photos/seed/buildwire-modular/1000/620",
     excerpt: "Off-site fabrication isn't new, but a new generation of modular systems is compressing schedules in ways that are hard to ignore. Here's what's actually driving the gains.",
     tags: ["Modular", "Innovation", "Scheduling", "Prefab"]
-  },
+  }
+  /*,
   {
     id: 7,
     type: "blog",
@@ -143,6 +144,7 @@ var SITE_POSTS = [
     excerpt: "Multi-phase projects live or die on subcontractor coordination. A few hard-won lessons from twenty years of running complex jobsites.",
     tags: ["Field Operations", "Subcontractors", "Scheduling", "Leadership"]
   }
+    */
 ];
 
 /* Expose to the browser (window.SITE_POSTS, used by main.js) and to Node
