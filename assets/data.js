@@ -64,14 +64,14 @@ var SITE_POSTS = [
     type: "blog",
     slug: "modular-construction-cutting-timelines",
     title: "5 Ways Modular Construction Is Cutting Project Timelines in Half",
-    category: "Innovation",
-    author: "Tomás Reyes",
-    role: "Contributing Editor",
-    date: "2026-08-15",
+    category: "Blog",
+    author: "TCU",
+    role: "Admin",
+    date: "2026-08-19",
     readTime: "6 min read",
     image: "https://picsum.photos/seed/buildwire-modular/1000/620",
     excerpt: "Off-site fabrication isn't new, but a new generation of modular systems is compressing schedules in ways that are hard to ignore. Here's what's actually driving the gains.",
-    tags: ["Modular", "Innovation", "Scheduling", "Prefab"]
+    tags: ["Blog"]
   }
   /*,
   {
