@@ -3,34 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Construction Update | Project, Equipment and Property</title>
-  <meta name="title" content="The Construction Update | Project, Equipment and Property">
-  <meta name="description" content="Construction news, project updates, real estate trends, heavy equipment insights and infrastructure developments in one place.">
+  <title>The Construction Update | Middle East Construction News</title>
+  <meta name="title" content="The Construction Update | Middle East Construction News">
+  <meta name="description" content="Weekly construction news from across the Middle East — project bids, contract awards, property, machinery and market trends, plus field-tested jobsite insight.">
   <meta name="url" content="https://theconstructionupdate.com/">
   <link rel="canonical" href="https://theconstructionupdate.com/">
-  
-  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:locale" content="en_AE" />
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="The Construction Update">
-  <meta property="og:title" content="The Construction Update | Project, Equipment and Property.">
-  <meta property="og:description" content="Construction news, project updates, real estate trends, heavy equipment insights and infrastructure developments in one place.">
+  <meta property="og:title" content="The Construction Update | Middle East Construction News">
+  <meta property="og:description" content="Weekly construction news from across the Middle East — project bids, contract awards, property, machinery and market trends, plus field-tested jobsite insight.">
   <meta property="og:url" content="https://theconstructionupdate.com/">
-  <meta property="og:image" content="assets/img/theconstructionupdate-logo.png">
+  <meta property="og:image" content="https://theconstructionupdate.com/assets/img/theconstructionupdate-logo.png">
   <meta property="og:image:alt" content="The Construction Update">
-  
-  <link rel="icon" type="image/x-icon" href="assets/img/tcu-favicon.svg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Construction Update | Middle East Construction News">
+  <meta name="twitter:description" content="Weekly construction news from across the Middle East — project bids, contract awards, property, machinery and market trends, plus field-tested jobsite insight.">
+  <meta name="twitter:image" content="https://theconstructionupdate.com/assets/img/theconstructionupdate-logo.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/tcu-favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "The Construction Update",
     "url": "https://theconstructionupdate.com/",
-    "description": "Construction news, project updates, real estate trends, heavy equipment insights and infrastructure developments in one place."
+    "description": "Weekly construction news from across the Middle East — project bids, contract awards, property, machinery and market trends, plus field-tested jobsite insight.",
+    "inLanguage": "en",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Construction Update",
+      "url": "https://theconstructionupdate.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://theconstructionupdate.com/assets/img/theconstructionupdate-logo.png"
+      },
+      "areaServed": "Middle East"
+    }
   }
   </script>
   <!-- Google Tag Manager -->
@@ -72,8 +90,8 @@
   <div class="container">
     <div class="hero-main">
       <span class="hero-tag">Weekly Update</span>
-      <h1>Construction news and field insight, <span>without the fluff.</span></h1>
-      <p>TheConstructionUpdate tracks the projects, policy shifts and market moves shaping the construction industry — plus practical, field-tested perspective from the people running jobsites.</p>
+      <h1>Construction news, project, field insight, <span>and more</span></h1>
+      <p>TheConstructionUpdate covers the machinery, projects, business and market trends shaping the industry, plus field-tested perspective from the people running jobsites.</p>
       <div class="hero-actions">
         <a href="news.html" class="btn btn-primary">Read the Latest News</a>
         <a href="blog.html" class="btn btn-outline">Explore the Blog</a>
@@ -97,7 +115,7 @@
       <div>
         <span class="eyebrow">News</span>
         <h2>Latest Industry News</h2>
-        <p class="desc">Project awards, regulation, materials markets and the moves shaping construction right now.</p>
+        <p class="desc">Weekly coverage of project bids, deals, market trends, real estate and machinery.</p>
       </div>
       <a href="news.html" class="section-link">View All News →</a>
     </div>
@@ -111,8 +129,8 @@
     <div class="section-head">
       <div>
         <span class="eyebrow">Blog</span>
-        <h2>From the Blog</h2>
-        <p class="desc">Field-tested perspective on safety, technology, business and running better jobsites.</p>
+        <h2>Latest Blog & Insight</h2>
+        <p class="desc">Safety, technology, business and jobsite know-how — from people who've done the work.</p>
       </div>
       <a href="blog.html" class="section-link">View All Posts →</a>
     </div>
@@ -225,18 +243,23 @@
     var news = posts.filter(function (p) { return p.type === "news"; }).sort(BuildWire.byDateDesc);
     var blog = posts.filter(function (p) { return p.type === "blog"; }).sort(BuildWire.byDateDesc);
 
-    // Hero feature = most recent post overall
-    var featured = posts.slice().sort(BuildWire.byDateDesc)[0];
-    document.getElementById("hero-feature").innerHTML =
-      '<img src="' + featured.image + '" alt="' + BuildWire.escapeHTML(featured.title) + '">' +
-      '<div class="body">' +
-        '<span class="cat">' + BuildWire.escapeHTML(featured.category) + '</span>' +
-        '<h3 style="margin-top:8px;"><a href="post.html?type=' + featured.type + '&id=' + featured.id + '" style="text-transform:none;font-family:Inter,sans-serif;font-weight:700;font-size:19px;color:#0f1b2d;">' + BuildWire.escapeHTML(featured.title) + '</a></h3>' +
-        '<div class="meta">' + BuildWire.escapeHTML(featured.author) + ' · ' + BuildWire.formatDate(featured.date) + '</div>' +
-      '</div>';
-
+    // Fill the grids first — a problem with the hero feature below can
+    // no longer block these from rendering.
     document.getElementById("home-news-grid").innerHTML = news.slice(0, 3).map(BuildWire.cardHTML).join("");
     document.getElementById("home-blog-grid").innerHTML = blog.slice(0, 3).map(BuildWire.cardHTML).join("");
+
+    // Hero feature = most recent post overall (guarded: does nothing if
+    // there are no posts yet, instead of throwing)
+    var featured = posts.slice().sort(BuildWire.byDateDesc)[0];
+    if (featured) {
+      document.getElementById("hero-feature").innerHTML =
+        '<img src="' + featured.image + '" alt="' + BuildWire.escapeHTML(featured.title) + '">' +
+        '<div class="body">' +
+          '<span class="cat">' + BuildWire.escapeHTML(featured.category) + '</span>' +
+          '<h3 style="margin-top:8px;"><a href="' + featured.slug + '.html" style="text-transform:none;font-family:Inter,sans-serif;font-weight:700;font-size:19px;color:#0f1b2d;">' + BuildWire.escapeHTML(featured.title) + '</a></h3>' +
+          '<div class="meta">' + BuildWire.escapeHTML(featured.author) + ' · ' + BuildWire.formatDate(featured.date) + '</div>' +
+        '</div>';
+    }
   })();
 </script>
 </body>
