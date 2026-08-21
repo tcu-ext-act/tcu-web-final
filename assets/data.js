@@ -62,32 +62,33 @@ var SITE_POSTS = [
   {
     id: 5,
     type: "blog",
-    slug: "modular-construction-cutting-timelines",
-    title: "5 Ways Modular Construction Is Cutting Project Timelines in Half",
+    slug: "residential-construction-equipment-machines-used-on-housing-sites",
+    title: "Residential Construction Equipment: Machines Used on Housing Sites",
     category: "Blog",
     author: "TCU",
     role: "Admin",
-    date: "2026-08-19",
-    readTime: "6 min read",
-    image: "https://picsum.photos/seed/buildwire-modular/1000/620",
-    excerpt: "Off-site fabrication isn't new, but a new generation of modular systems is compressing schedules in ways that are hard to ignore. Here's what's actually driving the gains.",
+    date: "2026-08-20",
+    readTime: "10 min read",
+    image: "https://www.hopenn.com/wp-content/uploads/2024/12/C595183-scaled.jpg",
+    excerpt: "Residential construction equipment explained: mini excavators, backhoe loaders, telehandlers, concrete pumps and compaction plant used on housing sites.",
+    tags: ["Blog"]
+  },
+  {
+    id: 6,
+    type: "blog",
+    slug: "commercial-construction-equipment-machines-used-on-office-retail-and-high-rise-projects",
+    title: "Commercial Construction Equipment: Machines Used on Office, Retail and High-Rise Projects",
+    category: "Blog",
+    author: "TCU",
+    role: "Admin",
+    date: "2026-08-20",
+    readTime: "10 min read",
+    image: "https://cmscdn.almarwan.com/public/inline-images/Al%20Marwan%20rental%20fleet%20at%20Al%20Layyah.jpg",
+    excerpt: "Commercial construction equipment guide: tower cranes, concrete pumps, placing booms, hoists, mast climbers and access plant for office and high-rise builds.",
     tags: ["Blog"]
   }
   /*,
-  {
-    id: 7,
-    type: "blog",
-    slug: "jobsite-safety-culture-that-sticks",
-    title: "How to Build a Jobsite Safety Culture That Actually Sticks",
-    category: "Safety",
-    author: "Angela Fitzgerald",
-    role: "Field Operations Columnist",
-    date: "2026-08-09",
-    readTime: "7 min read",
-    image: "https://picsum.photos/seed/buildwire-safetyculture/1000/620",
-    excerpt: "Posters and toolbox talks aren't enough. Real safety culture comes from how crews are led day to day — here's what separates sites that talk about safety from sites that live it.",
-    tags: ["Safety", "Leadership", "Culture", "Field Operations"]
-  },
+  
   {
     id: 8,
     type: "blog",
