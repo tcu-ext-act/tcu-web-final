@@ -27,7 +27,7 @@
       if (slug.startsWith('post/') || slug.startsWith('/post/')) {
         return match;
       }
-      return 'href="post/' + slug + '"';
+      return 'href="' + slug + '"';
     });
   }
 
