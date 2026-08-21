@@ -208,9 +208,13 @@
 
     function render(cat) {
       var items = cat === "All" ? all : all.filter(function (p) { return p.category === cat; });
-      grid.innerHTML = items.length
+      var html = items.length
         ? items.map(BuildWire.cardHTML).join("")
         : '<div class="empty-state">No stories found in this category yet.</div>';
+      // Fix missing "post/" in title links
+      grid.innerHTML = html.replace(/href="([^"]*\.html)"/g, function(match, slug) {
+        return !slug.startsWith('post/') ? 'href="post/' + slug + '"' : match;
+      });
     }
 
     filterBar.innerHTML = categories.map(function (cat, i) {
@@ -229,7 +233,11 @@
 
     // Sidebar: latest blog posts
     var blog = BuildWire.posts().filter(function (p) { return p.type === "blog"; }).sort(BuildWire.byDateDesc).slice(0, 4);
-    document.getElementById("sidebar-blog").innerHTML = blog.map(BuildWire.sidebarItemHTML).join("");
+    var blogHTML = blog.map(BuildWire.sidebarItemHTML).join("");
+    // Fix missing "post/" in sidebar links
+    document.getElementById("sidebar-blog").innerHTML = blogHTML.replace(/href="([^"]*\.html)"/g, function(match, slug) {
+      return !slug.startsWith('post/') ? 'href="post/' + slug + '"' : match;
+    });
 
     // Sidebar: tag cloud
     var tags = Array.from(new Set(BuildWire.posts().reduce(function (acc, p) { return acc.concat(p.tags); }, [])));
